@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>佳音的博客</title>
+        <atom:link href="http://blog.00rz.com/feed" rel="self" type="application/rss+xml" />
+	<link>http://blog.00rz.com</link>
+	<description>方乃做人之本，圆乃处世之道</description>
+	<lastBuildDate>Wed, 06 Oct 2010 14:25:43 +0000</lastBuildDate>
+	<generator>http://wordpress.org/?v=2.9.2</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+			<item>
+		<title>http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1/</title>
+		<link>http://blog.00rz.com/2010/10/httpwww-metabrew-comarticlea-million-user-comet-application-with-mochiweb-part-1.html</link>
+		<comments>http://blog.00rz.com/2010/10/httpwww-metabrew-comarticlea-million-user-comet-application-with-mochiweb-part-1.html#comments</comments>
+		<pubDate>Wed, 06 Oct 2010 14:24:54 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/2010/10/httpwww-metabrew-comarticlea-million-user-comet-application-with-mochiweb-part-1.html</guid>
+		<description><![CDATA[http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1/
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1/</p>
+<p><map name='google_ad_map_262_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/262?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_262_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=262&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F10%2Fhttpwww-metabrew-comarticlea-million-user-comet-application-with-mochiweb-part-1.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/10/httpwww-metabrew-comarticlea-million-user-comet-application-with-mochiweb-part-1.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>php extension 声明类属性</title>
+		<link>http://blog.00rz.com/2010/09/php-extension-delcare-class-array-property.html</link>
+		<comments>http://blog.00rz.com/2010/09/php-extension-delcare-class-array-property.html#comments</comments>
+		<pubDate>Wed, 22 Sep 2010 09:18:48 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[php]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=256</guid>
+		<description><![CDATA[在弄一个php扩展， 想把 扩展写成类的 形式， 于是在声明的时候 想给类加个array 属性
+于是expect 代码是这样的
+
+
+
+&#160;
+
+
+PHP_MINIT_FUNCTION&#40;concurrency&#41;
+
+
+&#123;
+
+
+&#160; &#160; &#160; &#160; zend_class_entry ce;
+
+
+&#160; &#160; &#160; &#160; INIT_CLASS_ENTRY&#40;ce, PHP_CONCURRENCY_CLASSNAME, concurrency_class_methods&#41;;
+
+
+&#160; &#160; &#160; &#160; concurrency_class_entry = zend_register_internal_class&#40;&#38;amp;ce TSRMLS_CC&#41;;
+
+
+&#160;
+
+
+&#160; &#160; &#160; &#160; zval *requests;
+
+
+&#160;
+
+
+&#160; &#160; &#160; &#160; MAKE_STD_ZVAL&#40;requests&#41;;
+
+
+&#160;
+
+
+&#160; &#160; &#160; &#160; array_init&#40;requests&#41;;
+
+
+&#160;
+
+
+&#160; &#160; &#160; &#160; zend_printf&#40;&#34;%d&#34;, requests-&#62;type&#41;;
+
+
+&#160; &#160; &#160; &#160; zend_declare_property&#40;concurrency_class_entry, &#34;requests&#34;, strlen&#40;&#34;requests&#34;&#41;, requests, ZEND_ACC_PUBLIC&#41;;
+
+
+&#160;
+
+
+&#160; &#160; &#160; &#160; [...]]]></description>
+			<content:encoded><![CDATA[<p>在弄一个php扩展， 想把 扩展写成类的 形式， 于是在声明的时候 想给类加个array 属性<br />
+于是expect 代码是这样的</p>
+<div class="dean_ch" style="white-space: wrap;">
+<ol>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">PHP_MINIT_FUNCTION<span class="br0">&#40;</span>concurrency<span class="br0">&#41;</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="br0">&#123;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; zend_class_entry ce;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; INIT_CLASS_ENTRY<span class="br0">&#40;</span>ce, PHP_CONCURRENCY_CLASSNAME, concurrency_class_methods<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; concurrency_class_entry = zend_register_internal_class<span class="br0">&#40;</span>&amp;amp;ce TSRMLS_CC<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; zval *requests;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; MAKE_STD_ZVAL<span class="br0">&#40;</span>requests<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; array_init<span class="br0">&#40;</span>requests<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; zend_printf<span class="br0">&#40;</span><span class="st0">&quot;%d&quot;</span>, requests-&gt;type<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; zend_declare_property<span class="br0">&#40;</span>concurrency_class_entry, <span class="st0">&quot;requests&quot;</span>, strlen<span class="br0">&#40;</span><span class="st0">&quot;requests&quot;</span><span class="br0">&#41;</span>, requests, ZEND_ACC_PUBLIC<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">return</span> SUCCESS;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="br0">&#125;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+</ol>
+</div>
+<p>结果报错，<br />
+PHP Fatal error:  Internal zval&#8217;s can&#8217;t be arrays, objects or resources in Unknown on line 0<br />
+把requests->type 用zend_printf打出来发现 结果是4 是 ZEND定义的IS_ARRAY,<br />
+继续翻代码<br />
+发现在Zend/zend_API.c 里面zend_declare_property的原型 有这样的定义</p>
+<div class="dean_ch" style="white-space: wrap;">
+<ol>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>ce-&gt;type &amp; ZEND_INTERNAL_CLASS<span class="br0">&#41;</span> <span class="br0">&#123;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">switch</span><span class="br0">&#40;</span>Z_TYPE_P<span class="br0">&#40;</span>property<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> IS_ARRAY:</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> IS_CONSTANT_ARRAY:</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> IS_OBJECT:</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">case</span> IS_RESOURCE:</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; zend_error<span class="br0">&#40;</span>E_CORE_ERROR, <span class="st0">&quot;Internal zval&#8217;s can&#8217;t be arrays, objects or resources&quot;</span><span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">break</span>;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw1">default</span>:</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="kw2">break</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#125;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+</ol>
+</div>
+<p>不知何意看<br />
+staceflow 上也有人遇到这种问题</p>
+<p>http://stackoverflow.com/posts/1105360/revisions</p>
+<p>，没办法，<br />
+于是就改成在构造函数里面 增加属性的声明<br />
+just as follow</p>
+<div class="dean_ch" style="white-space: wrap;">
+<ol>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">PHP_METHOD<span class="br0">&#40;</span>Concurrency, __construct<span class="br0">&#41;</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="br0">&#123;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; zval *pThis;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp; &nbsp; &nbsp; &nbsp; pThis = getThis<span class="br0">&#40;</span><span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; </div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; zval *requests;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; MAKE_STD_ZVAL<span class="br0">&#40;</span>requests<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; array_init<span class="br0">&#40;</span>requests<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li2">
+<div class="de2">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; add_property_zval_ex<span class="br0">&#40;</span>pThis, <span class="st0">&quot;requests&quot;</span>, <span class="kw4">sizeof</span><span class="br0">&#40;</span><span class="st0">&quot;requests&quot;</span><span class="br0">&#41;</span>, requests<span class="br0">&#41;</span>;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="br0">&#125;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+</ol>
+</div>
+<p>在这里记下！</p>
+<p><map name='google_ad_map_256_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/256?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_256_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=256&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F09%2Fphp-extension-delcare-class-array-property.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/09/php-extension-delcare-class-array-property.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>关于 ubuntu 下 eclipse  代码编辑区域 在代码 补全 后不能编辑 的笔记</title>
+		<link>http://blog.00rz.com/2010/08/%e5%85%b3%e4%ba%8e-ubuntu-%e4%b8%8b-eclipse-%e4%bb%a3%e7%a0%81%e7%bc%96%e8%be%91%e5%8c%ba%e5%9f%9f-%e5%9c%a8%e4%bb%a3%e7%a0%81-%e8%a1%a5%e5%85%a8-%e5%90%8e%e4%b8%8d%e8%83%bd%e7%bc%96%e8%be%91.html</link>
+		<comments>http://blog.00rz.com/2010/08/%e5%85%b3%e4%ba%8e-ubuntu-%e4%b8%8b-eclipse-%e4%bb%a3%e7%a0%81%e7%bc%96%e8%be%91%e5%8c%ba%e5%9f%9f-%e5%9c%a8%e4%bb%a3%e7%a0%81-%e8%a1%a5%e5%85%a8-%e5%90%8e%e4%b8%8d%e8%83%bd%e7%bc%96%e8%be%91.html#comments</comments>
+		<pubDate>Wed, 25 Aug 2010 04:25:24 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=254</guid>
+		<description><![CDATA[以前没有发现这个问题， 今天下了一个eclipse3.6 装了之后，发现编辑代码时，补全之后 编辑器貌似还在获得焦点，
+但是不能type 字符，很奇怪，
+google 了一下，没有找到，解决方案，
+这次baidu很出息，找到是scim问题， 据说还是一个老问题， 
+修改
+/etc/X11/xinit/xinput.d/scim
+将原来的
+GTK_IM_MODULE=xim
+QT_IM_MODULE=xim
+改成
+GTK_IM_MODULE=scim
+QT_IM_MODULE=scim
+之前在切换 terminal 的之后， 开始的时候键盘反应慢的问题也解决了。
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>以前没有发现这个问题， 今天下了一个eclipse3.6 装了之后，发现编辑代码时，补全之后 编辑器貌似还在获得焦点，<br />
+但是不能type 字符，很奇怪，<br />
+google 了一下，没有找到，解决方案，<br />
+这次baidu很出息，找到是scim问题， 据说还是一个老问题， </p>
+<p>修改<br />
+/etc/X11/xinit/xinput.d/scim<br />
+将原来的<br />
+GTK_IM_MODULE=xim<br />
+QT_IM_MODULE=xim<br />
+改成<br />
+GTK_IM_MODULE=scim<br />
+QT_IM_MODULE=scim</p>
+<p>之前在切换 terminal 的之后， 开始的时候键盘反应慢的问题也解决了。</p>
+<p><map name='google_ad_map_254_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/254?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_254_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=254&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F08%2F%25e5%2585%25b3%25e4%25ba%258e-ubuntu-%25e4%25b8%258b-eclipse-%25e4%25bb%25a3%25e7%25a0%2581%25e7%25bc%2596%25e8%25be%2591%25e5%258c%25ba%25e5%259f%259f-%25e5%259c%25a8%25e4%25bb%25a3%25e7%25a0%2581-%25e8%25a1%25a5%25e5%2585%25a8-%25e5%2590%258e%25e4%25b8%258d%25e8%2583%25bd%25e7%25bc%2596%25e8%25be%2591.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/08/%e5%85%b3%e4%ba%8e-ubuntu-%e4%b8%8b-eclipse-%e4%bb%a3%e7%a0%81%e7%bc%96%e8%be%91%e5%8c%ba%e5%9f%9f-%e5%9c%a8%e4%bb%a3%e7%a0%81-%e8%a1%a5%e5%85%a8-%e5%90%8e%e4%b8%8d%e8%83%bd%e7%bc%96%e8%be%91.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Twitter 更新 for 2010-07-25</title>
+		<link>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25-2.html</link>
+		<comments>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25-2.html#comments</comments>
+		<pubDate>Sun, 25 Jul 2010 08:20:00 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[twtteen]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25-2.html</guid>
+		<description><![CDATA[
+firefox + foxyproxy + ssh 比vpn 好用多了 #
+
+Powered by Twitter Tools
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<ul class="aktt_tweet_digest">
+<li>firefox + foxyproxy + ssh 比vpn 好用多了 <a href="http://twitter.com/zhangjiayin/statuses/19300009185" class="aktt_tweet_time">#</a></li>
+</ul>
+<p class="aktt_credit">Powered by <a href="http://alexking.org/projects/wordpress">Twitter Tools</a></p>
+<p><map name='google_ad_map_251_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/251?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_251_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=251&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F07%2Ftwitter-%25e6%259b%25b4%25e6%2596%25b0-for-2010-07-25-2.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25-2.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Twitter 更新 for 2010-07-25</title>
+		<link>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25.html</link>
+		<comments>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25.html#comments</comments>
+		<pubDate>Sun, 25 Jul 2010 08:20:00 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[twtteen]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25.html</guid>
+		<description><![CDATA[
+firefox + foxyproxy + ssh 比vpn 好用多了 #
+
+Powered by Twitter Tools
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<ul class="aktt_tweet_digest">
+<li>firefox + foxyproxy + ssh 比vpn 好用多了 <a href="http://twitter.com/zhangjiayin/statuses/19300009185" class="aktt_tweet_time">#</a></li>
+</ul>
+<p class="aktt_credit">Powered by <a href="http://alexking.org/projects/wordpress">Twitter Tools</a></p>
+<p><map name='google_ad_map_250_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/250?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_250_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=250&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F07%2Ftwitter-%25e6%259b%25b4%25e6%2596%25b0-for-2010-07-25.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/07/twitter-%e6%9b%b4%e6%96%b0-for-2010-07-25.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>High.Performance.MySQL2nd.Edition</title>
+		<link>http://blog.00rz.com/2010/06/244.html</link>
+		<comments>http://blog.00rz.com/2010/06/244.html#comments</comments>
+		<pubDate>Thu, 03 Jun 2010 08:46:44 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[电子书]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=244</guid>
+		<description><![CDATA[O&#8217;Reilly.High.Performance.MySQL,2nd.Edition
+O&#8217;Reilly.High.Performance.MySQL,2nd.Edition中文版
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p><a href='http://blog.00rz.com/wp-content/uploads/2010/06/OReilly.High.Performance.MySQL2nd.Edition.pdf.tar.g'>O&#8217;Reilly.High.Performance.MySQL,2nd.Edition</a><br />
+<a href='http://blog.00rz.com/wp-content/uploads/2010/06/OReilly.High.Performance.MySQL2nd.Edition-chinese.pdf.tar.g'>O&#8217;Reilly.High.Performance.MySQL,2nd.Edition中文版</a></p>
+<p><map name='google_ad_map_244_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/244?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_244_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=244&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F06%2F244.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/06/244.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>git手册</title>
+		<link>http://blog.00rz.com/2010/05/git%e6%89%8b%e5%86%8c.html</link>
+		<comments>http://blog.00rz.com/2010/05/git%e6%89%8b%e5%86%8c.html#comments</comments>
+		<pubDate>Sat, 15 May 2010 03:41:16 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=237</guid>
+		<description><![CDATA[http://progit.org/book/zh/
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>http://progit.org/book/zh/</p>
+<p><map name='google_ad_map_237_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/237?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_237_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=237&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F05%2Fgit%25e6%2589%258b%25e5%2586%258c.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/05/git%e6%89%8b%e5%86%8c.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>pylons 部署 + fastcgi</title>
+		<link>http://blog.00rz.com/2010/05/pylons-%e9%83%a8%e7%bd%b2-fastcgi.html</link>
+		<comments>http://blog.00rz.com/2010/05/pylons-%e9%83%a8%e7%bd%b2-fastcgi.html#comments</comments>
+		<pubDate>Fri, 14 May 2010 08:54:47 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=234</guid>
+		<description><![CDATA[http://www.rightbrainnetworks.com/blog/deploying-a-pylons-app-to-production-step-by-step-part-2-of-2/comment-page-1/#comment-27
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.rightbrainnetworks.com/blog/deploying-a-pylons-app-to-production-step-by-step-part-2-of-2/comment-page-1/#comment-27">http://www.rightbrainnetworks.com/blog/deploying-a-pylons-app-to-production-step-by-step-part-2-of-2/comment-page-1/#comment-27</a></p>
+<p><map name='google_ad_map_234_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/234?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_234_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=234&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F05%2Fpylons-%25e9%2583%25a8%25e7%25bd%25b2-fastcgi.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/05/pylons-%e9%83%a8%e7%bd%b2-fastcgi.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>python datamodel 貌似这页应该好好看下</title>
+		<link>http://blog.00rz.com/2010/05/python-datamodel-%e8%b2%8c%e4%bc%bc%e8%bf%99%e9%a1%b5%e5%ba%94%e8%af%a5%e5%a5%bd%e5%a5%bd%e7%9c%8b%e4%b8%8b.html</link>
+		<comments>http://blog.00rz.com/2010/05/python-datamodel-%e8%b2%8c%e4%bc%bc%e8%bf%99%e9%a1%b5%e5%ba%94%e8%af%a5%e5%a5%bd%e5%a5%bd%e7%9c%8b%e4%b8%8b.html#comments</comments>
+		<pubDate>Thu, 13 May 2010 15:19:37 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=232</guid>
+		<description><![CDATA[http://docs.python.org/reference/datamodel.html
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>http://docs.python.org/reference/datamodel.html</p>
+<p><map name='google_ad_map_232_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/232?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_232_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=232&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F05%2Fpython-datamodel-%25e8%25b2%258c%25e4%25bc%25bc%25e8%25bf%2599%25e9%25a1%25b5%25e5%25ba%2594%25e8%25af%25a5%25e5%25a5%25bd%25e5%25a5%25bd%25e7%259c%258b%25e4%25b8%258b.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/05/python-datamodel-%e8%b2%8c%e4%bc%bc%e8%bf%99%e9%a1%b5%e5%ba%94%e8%af%a5%e5%a5%bd%e5%a5%bd%e7%9c%8b%e4%b8%8b.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>the.Definitive.Guide.to.Pylons.Dec.2008.pdf</title>
+		<link>http://blog.00rz.com/2010/05/the-definitive-guide-to-pylons-dec-2008-pdf.html</link>
+		<comments>http://blog.00rz.com/2010/05/the-definitive-guide-to-pylons-dec-2008-pdf.html#comments</comments>
+		<pubDate>Tue, 11 May 2010 16:35:02 +0000</pubDate>
+		<dc:creator>佳音</dc:creator>
+				<category><![CDATA[python]]></category>
+
+		<guid isPermaLink="false">http://blog.00rz.com/?p=227</guid>
+		<description><![CDATA[Apress.the.Definitive.Guide.to.Pylons.Dec.2008
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p><a href='http://blog.00rz.com/wp-content/uploads/2010/05/Apress.the_.Definitive.Guide_.to_.Pylons.Dec.2008.pdf'>Apress.the.Definitive.Guide.to.Pylons.Dec.2008</a></p>
+<p><map name='google_ad_map_227_4664d84c6fd17adb'>
+<area shape='rect' href='http://imageads.googleadservices.com/pagead/imgclick/227?pos=0' coords='1,2,367,28' />
+<area shape='rect' href='http://services.google.com/feedback/abg' coords='384,10,453,23'/></map>
+<img usemap='#google_ad_map_227_4664d84c6fd17adb' border='0' src='http://imageads.googleadservices.com/pagead/ads?format=468x30_aff_img&amp;client=&amp;channel=&amp;output=png&amp;cuid=227&amp;url= http%3A%2F%2Fblog.00rz.com%2F2010%2F05%2Fthe-definitive-guide-to-pylons-dec-2008-pdf.html' /></p>]]></content:encoded>
+			<wfw:commentRss>http://blog.00rz.com/2010/05/the-definitive-guide-to-pylons-dec-2008-pdf.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
